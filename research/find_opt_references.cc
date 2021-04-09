@@ -19,7 +19,7 @@
 #include <gflags/gflags.h>
 using gflags::ParseCommandLineFlags;
 
-#include "./esaxx/sais.hxx"
+#include "esaxx/sais.hxx"
 
 DEFINE_bool(advanced, false, "Advanced searching mode: finds all longest "
     "matches at positions that are not covered by matches of length at least "

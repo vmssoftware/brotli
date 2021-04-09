@@ -30,6 +30,8 @@ class TestBroDecompress(_test_utils.TestCase):
         args = BRO_ARGS + ['-f', '-d', '-i', test_data, '-o', temp_uncompressed]
         subprocess.check_call(args, env=TEST_ENV)
 
+    @unittest.skipIf(subprocess.sys.platform == 'OpenVMS',
+                    'OpenVMS does not allow pipe to the opened file')
     def _decompress_pipe(self, test_data):
         temp_uncompressed = _test_utils.get_temp_uncompressed_name(test_data)
         args = BRO_ARGS + ['-d']
@@ -74,6 +76,8 @@ class TestBroCompress(_test_utils.TestCase):
         args.extend(['-i', test_data, '-o', temp_compressed])
         subprocess.check_call(args, env=TEST_ENV)
 
+    @unittest.skipIf(subprocess.sys.platform == 'OpenVMS',
+                    'OpenVMS does not allow pipe to the opened file')
     def _compress_pipe(self, test_data, **kwargs):
         temp_compressed = _test_utils.get_temp_compressed_name(test_data)
         args = BRO_ARGS

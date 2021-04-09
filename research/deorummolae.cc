@@ -1,9 +1,9 @@
-#include "./deorummolae.h"
+#include "deorummolae.h"
 
 #include <array>
 #include <cstdio>
 
-#include "./esaxx/sais.hxx"
+#include "esaxx/sais.hxx"
 
 /* Used for quick SA-entry to file mapping. Each file is padded to size that
    is a multiple of chunk size. */

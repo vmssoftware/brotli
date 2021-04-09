@@ -17,3 +17,6 @@ __pycache__/
 *.txt.uncompressed
 *.br
 *.unbr
+
+#Visual Studio Code files
+.vscode

@@ -4,12 +4,12 @@
    See file LICENSE for detail or copy at https://opensource.org/licenses/MIT
 */
 
-#include "./encoder_dict.h"
+#include "encoder_dict.h"
 
 #include "../common/dictionary.h"
 #include "../common/transform.h"
-#include "./dictionary_hash.h"
-#include "./hash.h"
+#include "dictionary_hash.h"
+#include "hash.h"
 
 #if defined(__cplusplus) || defined(c_plusplus)
 extern "C" {
